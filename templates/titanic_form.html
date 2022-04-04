@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <h1>Please, fill in the data about the passenger of Titanic</h1>
+    <form method="post" id="titanic_form">
+        <div class="form-group">
+            <label for="sex">Sex:</label><br>
+            <select name="sex" id="sex" form="titanic_form">
+                <option value="unknown">Unknown</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
+            <label for="pclass">Pclass:</label><br>
+            <select name="pclass" id="pclass" form="titanic_form">
+                <option value="unknown">Unknown</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select><br>
+            <label for="age">Age:</label><br>
+            <input type="number" name="age" id="age"  class="form-control" placeholder="Age (years)"><br>
+            <input type="submit" class="btn btn-success" value="Submit">
+        </div>
+    </form>
+
+{% endblock %}
